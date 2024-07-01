@@ -10,12 +10,13 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #fff;
+#floating-header {
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: opacity 0.3s ease;
 }
 
 nav {
@@ -50,19 +51,26 @@ main {
     padding-top: 80px;
 }
 
-section {
-    padding: 4rem 5%;
+#hero {
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-#hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 6rem 5%;
+.hero-content {
+    width: 50%;
+    padding: 50px;
+}
+
+#hero h1, #hero p, #hero .cta-button {
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 .cta-button {
@@ -72,7 +80,15 @@ h1 {
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 1rem;
+}
+
+#calculator-container {
+    width: 50%;
+    padding: 20px;
+}
+
+section {
+    padding: 4rem 5%;
 }
 
 h2 {
