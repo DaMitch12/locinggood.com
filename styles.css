@@ -52,7 +52,7 @@ main {
 }
 
 #hero {
-    background-image: url('path-to-your-image.jpg');
+    background-image: url('locsbackground1.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
