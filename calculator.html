@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        #result {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="savings-form">
+        <input type="number" id="cost" placeholder="Current spending on locs" required>
+        <button type="submit">Calculate Savings</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('savings-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var cost = document.getElementById('cost').value;
+            var savings = cost * 0.2;
+            document.getElementById('result').textContent = 'Your estimated savings: $' + savings.toFixed(2);
+        });
+    </script>
+</body>
+</html>
